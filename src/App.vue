@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="header" v-show="isLogin">
+    <div v-show="isLogin">
       <headerBar></headerBar>
     </div>
     <div class="content">
@@ -15,8 +15,8 @@
 </template>
 
 <script>
-  import   headerBar from "./style/header"
-  import   sliderBar from "./style/slider"
+  import   headerBar from "./style/headerBar"
+  import   sliderBar from "./style/sliderBar"
 export default {
   name: 'App',
   components:{sliderBar,headerBar},
@@ -25,7 +25,8 @@ export default {
       isLogin:''
     }
   },
-  mounted() {
+  updated(){
+    console.log("进入更新");
     this.getIsLogin()
   },
   methods:{

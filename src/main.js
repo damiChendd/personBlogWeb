@@ -5,21 +5,21 @@ import App from './App'
 import router from './router'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import Router from "vue-router";
 
 Vue.use(ElementUI);
 Vue.config.productionTip = false
 
+
 router.beforeEach((to,form,next)=>{
   //判断如果isLogin为false进入登陆页面，如果isLogin为true进入首页
   // localStorage.removeItem("isLogin");
-  console.log(localStorage.getItem("isLogin"));
+  // console.log(localStorage.getItem("isLogin"));
   if(to.meta.isLogin){
     if(localStorage.getItem("isLogin")){
-      // next({
-      //   path:"/"
-      // });
-      next();
+      next()
     }else{
+      // console.log("您还没有登录");
       next({
         path: "/login"//指向为你的登录界面
       });
@@ -27,7 +27,7 @@ router.beforeEach((to,form,next)=>{
   }else{
     next()
   }
-})
+});
 
 
 /* eslint-disable no-new */
@@ -37,4 +37,5 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+
 

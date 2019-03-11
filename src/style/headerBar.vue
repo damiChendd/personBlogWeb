@@ -1,5 +1,5 @@
 <template>
-    <div class="header">
+    <div class="headerStyle">
       <!--左边logo-->
       <div class="header-left">
         <div>
@@ -15,12 +15,12 @@
 
 <script>
     export default {
-        name: "header"
+        name: "headerBar"
     }
 </script>
 
 <style scoped>
-  .header{
+  .headerStyle{
     /*background-color: #eeeeee;*/
     /*background-color: whitesmoke;*/
     width: 100%;

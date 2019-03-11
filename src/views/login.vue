@@ -60,9 +60,11 @@
       methods:{
         //用户点击登陆后将isLogin设置为true，通知路由显示index页面
         handleLogin(){
-          console.log("点击登陆")
-          localStorage.setItem('isLogin',this.isLogin)
-          this.$router.push({path:'/ ',name:'index'} )
+          // console.log("点击登陆");
+          localStorage.setItem('isLogin',this.isLogin);
+          // console.log("跳转开始");
+          this.$router.push({path:'/',name:'index'} )
+          // console.log("跳转结束")
         }
       }
     }

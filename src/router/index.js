@@ -7,7 +7,7 @@ import blogList from '@/views/blogList'
 import HelloWorld from '@/components/HelloWorld'
 import writeBlog from "../views/writeBlog";
 
-Vue.use(Router)
+Vue.use(Router);
 
 // const router = export default new Router({
 export default new Router({
@@ -62,4 +62,6 @@ export default new Router({
     },
   ]
 })
+
+
 
