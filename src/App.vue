@@ -25,8 +25,14 @@ export default {
       isLogin:''
     }
   },
+  mounted() {
+    this.getIsLogin()
+  },
+  // created(){
+  //   console.log("进入赋值");
+  //   this.getIsLogin()
+  // },
   updated(){
-    console.log("进入更新");
     this.getIsLogin()
   },
   methods:{
