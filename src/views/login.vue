@@ -60,11 +60,27 @@
       methods:{
         //用户点击登陆后将isLogin设置为true，通知路由显示index页面
         handleLogin(){
-          // console.log("点击登陆");
-          localStorage.setItem('isLogin',this.isLogin);
-          // console.log("跳转开始");
-          this.$router.push({path:'/',name:'index'} )
-          // console.log("跳转结束")
+          // // console.log("点击登陆");
+          // localStorage.setItem('isLogin',this.isLogin);
+          // // console.log("跳转开始");
+          // this.$router.push({path:'/',name:'index'} )
+          // // console.log("跳转结束")
+
+
+
+        //  请求login接口，如果成功，点击跳转
+          console.log("发起请求开始");
+          this.axios.post('http://localhost:80/api/login',{
+            name:this.loginForm.username,
+            password:this.loginForm.password
+          }).then(function (response) {
+            console.log(response);
+          }).catch(function (error) {
+            console.log(error);
+          })
+
+          console.log("发起请求结束");
+
         }
       }
     }

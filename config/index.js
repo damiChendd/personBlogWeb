@@ -65,5 +65,15 @@ module.exports = {
     // `npm run build --report`
     // Set to `true` or `false` to always turn it on or off
     bundleAnalyzerReport: process.env.npm_config_report
+  },
+
+  proxyTable: {
+    '/api': {  //使用"/api"来代替"http://f.apiplus.c"
+      target: 'http://localhost:80/api', //源地址
+      changeOrigin: true, //改变源
+      pathRewrite: {
+        '^/api': 'http://localhost:80/api' //路径重写
+      }
+    }
   }
 }
