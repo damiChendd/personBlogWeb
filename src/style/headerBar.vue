@@ -7,6 +7,7 @@
         </div>
       </div>
       <!--右边退出按钮-->
+      <div>陈丹的个人博客</div>
       <div class="header-right">
         退出
       </div>
