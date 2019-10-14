@@ -1,7 +1,6 @@
 <template>
     <!--登录页面，由islogin来判断是否登入显示-->
   <div class="loginPage">
-    <h3>登录</h3>
     <el-card shadow="always">
       <el-form autoComplete="on"
                :model="loginForm"
